@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35728.132 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{77FC5E30-7464-46F2-8E4E-6272264EF1CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColledgeDocument.Api", "Backend\Src\ColledgeDocument.Api\ColledgeDocument.Api.csproj", "{E6021F33-3796-47A4-93F7-F63420C5B422}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{A95262A6-82BD-4E03-A394-212237ED8F5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColledgeDocument.Shared", "Shared\Src\ColledgeDocument.Shared\ColledgeDocument.Shared.csproj", "{9D492B00-C863-4024-935F-601532E9B05F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6021F33-3796-47A4-93F7-F63420C5B422}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6021F33-3796-47A4-93F7-F63420C5B422}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6021F33-3796-47A4-93F7-F63420C5B422}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6021F33-3796-47A4-93F7-F63420C5B422}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D492B00-C863-4024-935F-601532E9B05F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D492B00-C863-4024-935F-601532E9B05F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D492B00-C863-4024-935F-601532E9B05F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D492B00-C863-4024-935F-601532E9B05F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E6021F33-3796-47A4-93F7-F63420C5B422} = {77FC5E30-7464-46F2-8E4E-6272264EF1CC}
+		{9D492B00-C863-4024-935F-601532E9B05F} = {A95262A6-82BD-4E03-A394-212237ED8F5A}
+	EndGlobalSection
+EndGlobal

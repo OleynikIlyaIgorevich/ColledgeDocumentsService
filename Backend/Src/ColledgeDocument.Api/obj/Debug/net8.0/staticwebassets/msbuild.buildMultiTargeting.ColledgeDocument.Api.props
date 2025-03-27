@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ColledgeDocument.Api.props" />
+</Project>
