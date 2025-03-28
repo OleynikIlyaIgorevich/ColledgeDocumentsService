@@ -1,6 +1,6 @@
 ﻿namespace ColledgeDocument.Shared.Requests;
 
-public class UpdateDepartmentRequest
+public class CreateDocumentTypeRequest
 {
     [JsonPropertyName("title")]
     public string Title { get; set; }
