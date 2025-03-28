@@ -5,6 +5,7 @@ C:\Users\ilyao\OneDrive\Рабочий стол\ColledgeDocumentsService\Shared\
 C:\Users\ilyao\OneDrive\Рабочий стол\ColledgeDocumentsService\Shared\Src\ColledgeDocument.Shared\obj\Debug\net8.0\ColledgeDocument.Shared.AssemblyInfoInputs.cache
 C:\Users\ilyao\OneDrive\Рабочий стол\ColledgeDocumentsService\Shared\Src\ColledgeDocument.Shared\obj\Debug\net8.0\ColledgeDocument.Shared.AssemblyInfo.cs
 C:\Users\ilyao\OneDrive\Рабочий стол\ColledgeDocumentsService\Shared\Src\ColledgeDocument.Shared\obj\Debug\net8.0\ColledgeDocument.Shared.csproj.CoreCompileInputs.cache
+C:\Users\ilyao\OneDrive\Рабочий стол\ColledgeDocumentsService\Shared\Src\ColledgeDocument.Shared\obj\Debug\net8.0\ColledgeDocument.Shared.sourcelink.json
 C:\Users\ilyao\OneDrive\Рабочий стол\ColledgeDocumentsService\Shared\Src\ColledgeDocument.Shared\obj\Debug\net8.0\ColledgeDocument.Shared.dll
 C:\Users\ilyao\OneDrive\Рабочий стол\ColledgeDocumentsService\Shared\Src\ColledgeDocument.Shared\obj\Debug\net8.0\refint\ColledgeDocument.Shared.dll
 C:\Users\ilyao\OneDrive\Рабочий стол\ColledgeDocumentsService\Shared\Src\ColledgeDocument.Shared\obj\Debug\net8.0\ColledgeDocument.Shared.pdb

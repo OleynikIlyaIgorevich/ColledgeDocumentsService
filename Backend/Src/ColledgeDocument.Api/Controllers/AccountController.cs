@@ -55,11 +55,12 @@ public class AccountController : BaseController
         if (user == null) return NotFound("Пользователь не найден!");
 
         var isRequestValid = true;
-        if (!isRequestValid) return BadRequest("Что то не то");
+        if (!isRequestValid) return BadRequest();
 
         user.Lastname = request.Lastname;
         user.Firstname = request.Firstname;
         user.Middlename = request.Middlename;
+        user.Phone = request.Phone;
         user.Username = request.Username;
         user.UpdatedAt = DateTime.Now;
 
@@ -87,7 +88,7 @@ public class AccountController : BaseController
         if (user == null) return NotFound("Пользователь не найден!");
 
         var isRequestValid = true;
-        if (!isRequestValid) return BadRequest("Что то не то");
+        if (!isRequestValid) return BadRequest();
 
         user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.NewPassword);
         user.UpdatedAt = DateTime.Now;
