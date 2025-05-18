@@ -1,4 +1,6 @@
-﻿namespace ColledgeDocument.Api.Controllers;
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace ColledgeDocument.Api.Controllers;
 
 public class DocumentOrderController : BaseController
 {
@@ -15,16 +17,51 @@ public class DocumentOrderController : BaseController
     [ProducesResponseType<PaginationResponse<DocumentOrderResponse>>(StatusCodes.Status200OK)]
     public async Task<IActionResult> GetPaginatedAsync(
         int pageNumber, int pageSize,
+        int departmentId = default, int documentTypeId = default,
+        string? searchTerm = default,
         CancellationToken cancellationToken = default)
     {
-        var totalCount = await _dbContext.DocumentOrders.CountAsync(cancellationToken);
-
-        var documentOrders = await _dbContext.DocumentOrders
+        var totalCountQuery = _dbContext.DocumentOrders
+            .AsQueryable();
+        var documentOrdersQuery = _dbContext.DocumentOrders
             .Include(u => u.User)
             .Include(dr => dr.DocumentType)
             .Include(dr => dr.OrderStatus)
             .Include(dr => dr.Departament)
-            .OrderBy(u => u.CreatedAt)
+            .AsQueryable();
+
+        if (departmentId != default)
+        {
+            totalCountQuery = totalCountQuery.Where(x => x.DepartamentId == departmentId);
+            documentOrdersQuery = documentOrdersQuery.Where(x => x.DepartamentId == departmentId);
+        }
+
+        if (documentTypeId != default)
+        {
+            totalCountQuery = totalCountQuery.Where(x => x.DocumentTypeId == documentTypeId);
+            documentOrdersQuery = documentOrdersQuery.Where(x => x.DocumentTypeId == documentTypeId);
+        }
+
+        if (!string.IsNullOrWhiteSpace(searchTerm))
+        {
+            searchTerm = searchTerm.Trim();
+            documentOrdersQuery = documentOrdersQuery.Where(x =>
+                x.User.Lastname.ToLower().Contains(searchTerm) ||
+                x.User.Firstname.ToLower().Contains(searchTerm) ||
+                x.User.Middlename.ToLower().Contains(searchTerm) ||
+                x.User.Phone.ToLower().Contains(searchTerm));
+
+            totalCountQuery = totalCountQuery.Where(x =>
+                x.User.Lastname.ToLower().Contains(searchTerm) ||
+                x.User.Firstname.ToLower().Contains(searchTerm) ||
+                x.User.Middlename.ToLower().Contains(searchTerm) ||
+                x.User.Phone.ToLower().Contains(searchTerm));
+        }
+
+        var totalCount = await totalCountQuery.CountAsync(cancellationToken);
+
+        var documentOrders = await documentOrdersQuery
+            .OrderByDescending(u => u.CreatedAt)
             .Skip((pageNumber - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync(cancellationToken);
@@ -200,5 +237,46 @@ public class DocumentOrderController : BaseController
             nameof(GetByIdAsync),
             new { documentOrderId = documentOrderResponse.Id },
             documentOrderResponse);
+    }
+
+    [HttpPut("{documentOrderId:int}")]
+    [Authorize]
+    private async Task<IActionResult> UpdateAsync(
+        int documentOrderId,
+        UpdateDocumentOrderRequest request,
+        CancellationToken cancellationToken = default)
+    {
+        if (documentOrderId == default) return BadRequest("Некорректный идентификатор!");
+
+        var documentOrder = await _dbContext.DocumentOrders
+         .SingleOrDefaultAsync(x => x.Id == documentOrderId, cancellationToken);
+        if (documentOrder == null) return NotFound("Заявка на справку с данным идентификатором не найдена!");
+
+        return NoContent();
+    }
+
+
+    [HttpDelete("{documentOrderId:int}")]
+    [Authorize(Roles = "Оператор справок, Администратор")]
+    private async Task<IActionResult> DeleteAsync(
+        int documentOrderId,
+        CancellationToken cancellationToken = default)
+    {
+        if (documentOrderId == default) return BadRequest("Некорректный идентификатор!");
+
+        var currentUser = User;
+        var currentUserId = Convert.ToInt32(currentUser.FindFirst(ClaimTypes.NameIdentifier)!.Value);
+
+        var isRequestValid = true;
+        if (!isRequestValid) return BadRequest();
+
+        var documentOrder = await _dbContext.DocumentOrders
+            .SingleOrDefaultAsync(x => x.Id == documentOrderId, cancellationToken);
+        if (documentOrder == null) return NotFound("Заявка на справку с данным идентификатором не найдена!");
+
+        _dbContext.DocumentOrders.Remove(documentOrder);
+        await _dbContext.SaveChangesAsync(cancellationToken);
+
+        return NoContent();
     }
 }

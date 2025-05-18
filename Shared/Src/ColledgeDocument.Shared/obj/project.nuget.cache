@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "K3+CyDRee30=",
+  "dgSpecHash": "jJ1dihu32vg=",
   "success": true,
   "projectFilePath": "C:\\Users\\ilyao\\OneDrive\\Рабочий стол\\ColledgeDocumentsService\\Shared\\Src\\ColledgeDocument.Shared\\ColledgeDocument.Shared.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ilyao\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

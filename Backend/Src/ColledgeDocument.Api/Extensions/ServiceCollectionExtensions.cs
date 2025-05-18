@@ -16,6 +16,22 @@ public static class ServiceCollectionExtensions
         });
     }
 
+    public static void AddValidators(this IServiceCollection services)
+    {
+        services
+            .AddTransient<IValidator<CreateDepartmentRequest>, CreateDepartmentRequestValidator>()
+            .AddTransient<IValidator<CreateDocumentOrderRequest>, CreateDocumentOrderRequestValidator>()
+            .AddTransient<IValidator<CreateDocumentTypeRequest>, CreateDocumentTypeRequestValidator>()
+            .AddTransient<IValidator<CreateUserRequest>, CreateUserRequestValidator>()
+            .AddTransient<IValidator<TokenRequest>, TokenRequestValidator>()
+            .AddTransient<IValidator<UpdateDepartmentRequest>, UpdateDepartmentRequestValidator>()
+            .AddTransient<IValidator<UpdateDocumentOrderRequest>, UpdateDocumentOrderRequestValidator>()
+            .AddTransient<IValidator<UpdateDocumentTypeRequest>, UpdateDocumentTypeRequestValidator>()
+            .AddTransient<IValidator<UpdatePasswordRequest>, UpdatePasswordRequestValidator>()
+            .AddTransient<IValidator<UpdateProfileRequest>, UpdateProfileRequestValidator>()
+            .AddTransient<IValidator<UpdateUserRequest>, UpdateUserRequestValidator>();
+    }
+
     public static IServiceCollection AddSwagger(this IServiceCollection services)
     {
         return services.AddSwaggerGen(option =>
@@ -56,7 +72,6 @@ public static class ServiceCollectionExtensions
             .AddJwtBearer(bearer =>
             {
                 bearer.RequireHttpsMetadata = false;
-                bearer.SaveToken = true;
                 bearer.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,

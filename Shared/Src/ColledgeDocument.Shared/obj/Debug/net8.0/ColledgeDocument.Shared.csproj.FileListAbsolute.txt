@@ -10,3 +10,4 @@ C:\Users\ilyao\OneDrive\Рабочий стол\ColledgeDocumentsService\Shared\
 C:\Users\ilyao\OneDrive\Рабочий стол\ColledgeDocumentsService\Shared\Src\ColledgeDocument.Shared\obj\Debug\net8.0\refint\ColledgeDocument.Shared.dll
 C:\Users\ilyao\OneDrive\Рабочий стол\ColledgeDocumentsService\Shared\Src\ColledgeDocument.Shared\obj\Debug\net8.0\ColledgeDocument.Shared.pdb
 C:\Users\ilyao\OneDrive\Рабочий стол\ColledgeDocumentsService\Shared\Src\ColledgeDocument.Shared\obj\Debug\net8.0\ref\ColledgeDocument.Shared.dll
+C:\Users\ilyao\OneDrive\Рабочий стол\ColledgeDocumentsService\Shared\Src\ColledgeDocument.Shared\obj\Debug\net8.0\ColledgeDocument.Shared.csproj.AssemblyReference.cache

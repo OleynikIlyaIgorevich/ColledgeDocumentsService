@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\ilyao\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ColledgeDocumentsService\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9D492B00-C863-4024-935F-601532E9B05F}|Shared\\Src\\ColledgeDocument.Shared\\ColledgeDocument.Shared.csproj|c:\\users\\ilyao\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\colledgedocumentsservice\\shared\\src\\colledgedocument.shared\\validators\\tokenrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D492B00-C863-4024-935F-601532E9B05F}|Shared\\Src\\ColledgeDocument.Shared\\ColledgeDocument.Shared.csproj|solutionrelative:shared\\src\\colledgedocument.shared\\validators\\tokenrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D492B00-C863-4024-935F-601532E9B05F}|Shared\\Src\\ColledgeDocument.Shared\\ColledgeDocument.Shared.csproj|c:\\users\\ilyao\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\colledgedocumentsservice\\shared\\src\\colledgedocument.shared\\validators\\updateuserrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D492B00-C863-4024-935F-601532E9B05F}|Shared\\Src\\ColledgeDocument.Shared\\ColledgeDocument.Shared.csproj|solutionrelative:shared\\src\\colledgedocument.shared\\validators\\updateuserrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D492B00-C863-4024-935F-601532E9B05F}|Shared\\Src\\ColledgeDocument.Shared\\ColledgeDocument.Shared.csproj|c:\\users\\ilyao\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\colledgedocumentsservice\\shared\\src\\colledgedocument.shared\\validators\\updatepasswordrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D492B00-C863-4024-935F-601532E9B05F}|Shared\\Src\\ColledgeDocument.Shared\\ColledgeDocument.Shared.csproj|solutionrelative:shared\\src\\colledgedocument.shared\\validators\\updatepasswordrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D492B00-C863-4024-935F-601532E9B05F}|Shared\\Src\\ColledgeDocument.Shared\\ColledgeDocument.Shared.csproj|c:\\users\\ilyao\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\colledgedocumentsservice\\shared\\src\\colledgedocument.shared\\validators\\createuserrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D492B00-C863-4024-935F-601532E9B05F}|Shared\\Src\\ColledgeDocument.Shared\\ColledgeDocument.Shared.csproj|solutionrelative:shared\\src\\colledgedocument.shared\\validators\\createuserrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +26,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TokenRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\ilyao\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ColledgeDocumentsService\\Shared\\Src\\ColledgeDocument.Shared\\Validators\\TokenRequestValidator.cs",
+              "RelativeDocumentMoniker": "Shared\\Src\\ColledgeDocument.Shared\\Validators\\TokenRequestValidator.cs",
+              "ToolTip": "C:\\Users\\ilyao\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ColledgeDocumentsService\\Shared\\Src\\ColledgeDocument.Shared\\Validators\\TokenRequestValidator.cs",
+              "RelativeToolTip": "Shared\\Src\\ColledgeDocument.Shared\\Validators\\TokenRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T04:33:05.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UpdateUserRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\ilyao\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ColledgeDocumentsService\\Shared\\Src\\ColledgeDocument.Shared\\Validators\\UpdateUserRequestValidator.cs",
+              "RelativeDocumentMoniker": "Shared\\Src\\ColledgeDocument.Shared\\Validators\\UpdateUserRequestValidator.cs",
+              "ToolTip": "C:\\Users\\ilyao\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ColledgeDocumentsService\\Shared\\Src\\ColledgeDocument.Shared\\Validators\\UpdateUserRequestValidator.cs",
+              "RelativeToolTip": "Shared\\Src\\ColledgeDocument.Shared\\Validators\\UpdateUserRequestValidator.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwDsAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T04:32:35.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UpdatePasswordRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\ilyao\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ColledgeDocumentsService\\Shared\\Src\\ColledgeDocument.Shared\\Validators\\UpdatePasswordRequestValidator.cs",
+              "RelativeDocumentMoniker": "Shared\\Src\\ColledgeDocument.Shared\\Validators\\UpdatePasswordRequestValidator.cs",
+              "ToolTip": "C:\\Users\\ilyao\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ColledgeDocumentsService\\Shared\\Src\\ColledgeDocument.Shared\\Validators\\UpdatePasswordRequestValidator.cs",
+              "RelativeToolTip": "Shared\\Src\\ColledgeDocument.Shared\\Validators\\UpdatePasswordRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T04:32:25.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CreateUserRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\ilyao\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ColledgeDocumentsService\\Shared\\Src\\ColledgeDocument.Shared\\Validators\\CreateUserRequestValidator.cs",
+              "RelativeDocumentMoniker": "Shared\\Src\\ColledgeDocument.Shared\\Validators\\CreateUserRequestValidator.cs",
+              "ToolTip": "C:\\Users\\ilyao\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ColledgeDocumentsService\\Shared\\Src\\ColledgeDocument.Shared\\Validators\\CreateUserRequestValidator.cs",
+              "RelativeToolTip": "Shared\\Src\\ColledgeDocument.Shared\\Validators\\CreateUserRequestValidator.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwDUAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T04:32:05.094Z",
+              "EditorCaption": ""
             }
           ]
         }

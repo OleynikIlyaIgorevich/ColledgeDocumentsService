@@ -35,7 +35,7 @@ public class DocumentTypeController : BaseController
     {
         if (documentTypeId == default) return BadRequest("Идентификатор не валиден!");
 
-        var documentType = await _dbContext.DocumentTypes.SingleOrDefaultAsync(cancellationToken);
+        var documentType = await _dbContext.DocumentTypes.SingleOrDefaultAsync(x => x.Id == documentTypeId);
         if (documentType == null) return NotFound("Тип справки не найдена!");
 
         var documentTypeResponse = new DocumentTypeResponse(
@@ -46,7 +46,7 @@ public class DocumentTypeController : BaseController
     }
 
     [HttpPost]
-    [Authorize(Roles = "Администратор")]
+    [Authorize(Roles = "Оператор справок, Администратор")]
     [ProducesResponseType<string>(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType<string>(StatusCodes.Status403Forbidden)]
     [ProducesResponseType<string>(StatusCodes.Status400BadRequest)]
@@ -80,7 +80,7 @@ public class DocumentTypeController : BaseController
     }
 
     [HttpPut("{documentTypeId:int}")]
-    [Authorize(Roles = "Администратор")]
+    [Authorize(Roles = "Оператор справок, Администратор")]
     public async Task<IActionResult> UpdateAsync(
         int documentTypeId,
         UpdateDocumentTypeRequest request,
@@ -108,7 +108,7 @@ public class DocumentTypeController : BaseController
 
 
     [HttpDelete("{documentTypeId:int}")]
-    [Authorize(Roles = "Администратор")]
+    [Authorize(Roles = "Оператор справок, Администратор")]
     public async Task<IActionResult> DeleteAsync(
         int documentTypeId,
         CancellationToken cancellationToken = default)

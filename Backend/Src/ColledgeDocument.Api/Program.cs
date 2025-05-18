@@ -20,6 +20,7 @@ builder.Services.AddJwtAuthentication(jwtOptions);
 builder.Services.AddDatabase(configuration);
 builder.Services.AddHelpers();
 builder.Services.AddSwagger();
+builder.Services.AddValidators();
 
 var app = builder.Build();
 

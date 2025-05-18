@@ -106,6 +106,7 @@ public class UserController : BaseController
             Firstname = request.FirstName,
             Middlename = request.MiddleName,
             Username = request.Username,
+            Phone = request.Phone,
             PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password),
             RoleId = role.Id,
         };

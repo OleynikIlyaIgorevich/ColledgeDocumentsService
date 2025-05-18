@@ -57,9 +57,9 @@ public class AccountController : BaseController
         var isRequestValid = true;
         if (!isRequestValid) return BadRequest();
 
-        user.Lastname = request.Lastname;
-        user.Firstname = request.Firstname;
-        user.Middlename = request.Middlename;
+        user.Lastname = request.LastName;
+        user.Firstname = request.FirstName;
+        user.Middlename = request.MiddleName;
         user.Phone = request.Phone;
         user.Username = request.Username;
         user.UpdatedAt = DateTime.Now;

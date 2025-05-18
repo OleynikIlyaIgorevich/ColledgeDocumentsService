@@ -19,6 +19,9 @@ global using ColledgeDocument.Api.Controllers.Base;
 global using ColledgeDocument.Shared.Requests;
 global using ColledgeDocument.Shared.Responses;
 global using Microsoft.AspNetCore.Authorization;
+global using ColledgeDocument.Shared.Validators;
+global using FluentValidation;
+
 
 
 

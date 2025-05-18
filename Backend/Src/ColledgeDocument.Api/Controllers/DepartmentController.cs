@@ -47,7 +47,7 @@ public class DepartmentController : BaseController
     }
 
     [HttpPost]
-    [Authorize(Roles = "Администратор")]
+    [Authorize(Roles = "Оператор справок, Администратор")]
     [ProducesResponseType<string>(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType<string>(StatusCodes.Status403Forbidden)]
     [ProducesResponseType<string>(StatusCodes.Status400BadRequest)]
@@ -82,7 +82,7 @@ public class DepartmentController : BaseController
     }
 
     [HttpPut("{departmentId:int}")]
-    [Authorize(Roles = "Администратор")]
+    [Authorize(Roles = "Оператор справок, Администратор")]
     [ProducesResponseType<string>(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType<string>(StatusCodes.Status403Forbidden)]
     [ProducesResponseType<string>(StatusCodes.Status400BadRequest)]
@@ -115,8 +115,7 @@ public class DepartmentController : BaseController
     }
 
     [HttpDelete("{departmentId:int}")]
-    [Authorize(Roles = "Администратор")]
-    [Authorize(Roles = "Администратор")]
+    [Authorize(Roles = "Оператор справок, Администратор")]
     [ProducesResponseType<string>(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType<string>(StatusCodes.Status403Forbidden)]
     [ProducesResponseType<string>(StatusCodes.Status400BadRequest)]

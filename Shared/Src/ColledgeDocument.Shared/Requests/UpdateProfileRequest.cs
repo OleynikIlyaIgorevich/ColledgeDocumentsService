@@ -3,11 +3,11 @@
 public class UpdateProfileRequest
 {
     [JsonPropertyName("lastname")]
-    public string Lastname { get; set; }
+    public string LastName { get; set; }
     [JsonPropertyName("firstname")]
-    public string Firstname { get; set; }
+    public string FirstName { get; set; }
     [JsonPropertyName("middlename")]
-    public string Middlename { get; set; }
+    public string MiddleName { get; set; }
     [JsonPropertyName("phone")]
     public string Phone { get; set; }
     [JsonPropertyName("username")]

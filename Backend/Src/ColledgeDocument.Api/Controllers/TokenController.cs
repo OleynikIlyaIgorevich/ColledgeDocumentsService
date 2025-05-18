@@ -16,6 +16,7 @@ public class TokenController : BaseController
     [ProducesResponseType<string>(StatusCodes.Status400BadRequest)]
     [ProducesResponseType<string>(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType<TokenResponse>(StatusCodes.Status200OK)]
+    [AllowAnonymous]
     public async Task<IActionResult> SignInAsync(
         TokenRequest request,
         CancellationToken cancellationToken = default)
@@ -56,6 +57,7 @@ public class TokenController : BaseController
     [ProducesResponseType<string>(StatusCodes.Status400BadRequest)]
     [ProducesResponseType<string>(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType<TokenResponse>(StatusCodes.Status200OK)]
+    [AllowAnonymous]
     public async Task<IActionResult> RefreshTokenAsync(
         RefreshTokenRequest request,
         CancellationToken cancellationToken = default)
@@ -75,8 +77,6 @@ public class TokenController : BaseController
 
         var refreshToken = _jwtHelper.GenerateRefreshToken();
         var accessToken = _jwtHelper.GenerateJwtToken(refreshSession.User);
-
-        _dbContext.Remove(refreshSession);
 
         var newRefreshSession = new RefreshSession()
         {

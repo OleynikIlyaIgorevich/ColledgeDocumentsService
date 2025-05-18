@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "8a/1inXhQzU=",
+  "dgSpecHash": "6ck4w7vWjDo=",
   "success": true,
   "projectFilePath": "C:\\Users\\ilyao\\OneDrive\\Рабочий стол\\ColledgeDocumentsService\\Backend\\Src\\ColledgeDocument.Api\\ColledgeDocument.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ilyao\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
+    "C:\\Users\\ilyao\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",
     "C:\\Users\\ilyao\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\ilyao\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.14\\microsoft.aspnetcore.authentication.jwtbearer.8.0.14.nupkg.sha512",
     "C:\\Users\\ilyao\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

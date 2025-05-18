@@ -124,3 +124,4 @@ C:\Users\ilyao\OneDrive\Рабочий стол\ColledgeDocumentsService\Backend
 C:\Users\ilyao\OneDrive\Рабочий стол\ColledgeDocumentsService\Backend\Src\ColledgeDocument.Api\obj\Debug\net8.0\ColledgeDocument.Api.pdb
 C:\Users\ilyao\OneDrive\Рабочий стол\ColledgeDocumentsService\Backend\Src\ColledgeDocument.Api\obj\Debug\net8.0\ColledgeDocument.Api.genruntimeconfig.cache
 C:\Users\ilyao\OneDrive\Рабочий стол\ColledgeDocumentsService\Backend\Src\ColledgeDocument.Api\obj\Debug\net8.0\ref\ColledgeDocument.Api.dll
+C:\Users\ilyao\OneDrive\Рабочий стол\ColledgeDocumentsService\Backend\Src\ColledgeDocument.Api\bin\Debug\net8.0\FluentValidation.dll
