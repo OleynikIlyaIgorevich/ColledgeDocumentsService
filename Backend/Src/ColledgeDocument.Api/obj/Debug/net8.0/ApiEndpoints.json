@@ -554,6 +554,43 @@
   },
   {
     "ContainingType": "ColledgeDocument.Api.Controllers.DocumentOrderController",
+    "Method": "UpdateAsync",
+    "RelativePath": "api/documentorder/{documentOrderId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "documentOrderId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "ColledgeDocument.Shared.Requests.UpdateDocumentOrderRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ColledgeDocument.Api.Controllers.DocumentOrderController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/documentorder/{documentOrderId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "documentOrderId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ColledgeDocument.Api.Controllers.DocumentOrderController",
     "Method": "GetPaginatedMeAsync",
     "RelativePath": "api/documentorder/me",
     "HttpMethod": "GET",

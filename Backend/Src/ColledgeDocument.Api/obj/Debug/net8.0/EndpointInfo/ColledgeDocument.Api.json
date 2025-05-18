@@ -1104,6 +1104,67 @@
             }
           }
         }
+      },
+      "put": {
+        "tags": [
+          "DocumentOrder"
+        ],
+        "parameters": [
+          {
+            "name": "documentOrderId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDocumentOrderRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDocumentOrderRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDocumentOrderRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "DocumentOrder"
+        ],
+        "parameters": [
+          {
+            "name": "documentOrderId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/api/documenttype": {
@@ -2350,6 +2411,28 @@
           "title": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateDocumentOrderRequest": {
+        "type": "object",
+        "properties": {
+          "document_type_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "departament_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "order_status_id": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

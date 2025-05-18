@@ -240,17 +240,41 @@ public class DocumentOrderController : BaseController
     }
 
     [HttpPut("{documentOrderId:int}")]
-    [Authorize]
-    private async Task<IActionResult> UpdateAsync(
+    [Authorize(Roles = "Оператор справок, Администратор")]
+    public async Task<IActionResult> UpdateAsync(
         int documentOrderId,
         UpdateDocumentOrderRequest request,
         CancellationToken cancellationToken = default)
     {
         if (documentOrderId == default) return BadRequest("Некорректный идентификатор!");
 
+        var isRequestValid = true;
+        if (!isRequestValid) return BadRequest();
+
+        var currentUser = User;
+        var currentUserId = Convert.ToInt32(currentUser.FindFirst(ClaimTypes.NameIdentifier)!.Value);
+
         var documentOrder = await _dbContext.DocumentOrders
          .SingleOrDefaultAsync(x => x.Id == documentOrderId, cancellationToken);
         if (documentOrder == null) return NotFound("Заявка на справку с данным идентификатором не найдена!");
+
+        var documentType = await _dbContext.DocumentTypes.SingleOrDefaultAsync(x => x.Id == request.DocumentTypeId, cancellationToken);
+        if (documentType == null) return NotFound("Тип документа не найден!");
+
+        var department = await _dbContext.Departaments.SingleOrDefaultAsync(x => x.Id == request.DepartmentId, cancellationToken);
+        if (department == null) return NotFound("Подразделение не найдено!");
+
+        var orderStatus = await _dbContext.OrderStatuses.SingleOrDefaultAsync(x => x.Id == request.OrderStatusId, cancellationToken);
+        if (orderStatus == null) return NotFound("Статус не найден!");
+
+        documentOrder.DocumentTypeId = request.DocumentTypeId;
+        documentOrder.DepartamentId = request.DepartmentId;
+        documentOrder.Quantity = request.Quantity;
+        documentOrder.OrderStatusId = request.OrderStatusId;
+        documentOrder.UpdatedAt = DateTime.Now;
+
+        _dbContext.Update(documentOrder);
+        await _dbContext.SaveChangesAsync(cancellationToken);
 
         return NoContent();
     }
@@ -258,7 +282,7 @@ public class DocumentOrderController : BaseController
 
     [HttpDelete("{documentOrderId:int}")]
     [Authorize(Roles = "Оператор справок, Администратор")]
-    private async Task<IActionResult> DeleteAsync(
+    public async Task<IActionResult> DeleteAsync(
         int documentOrderId,
         CancellationToken cancellationToken = default)
     {

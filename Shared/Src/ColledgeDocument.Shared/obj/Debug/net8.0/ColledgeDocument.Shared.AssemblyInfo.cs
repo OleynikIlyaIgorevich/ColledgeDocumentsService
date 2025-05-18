@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ColledgeDocument.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45656131fdd94c564ed3ca497b6c91e1b894db2a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78677a1f472bea7fdc29a344b0f4c700e8b4726b")]
 [assembly: System.Reflection.AssemblyProductAttribute("ColledgeDocument.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ColledgeDocument.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
